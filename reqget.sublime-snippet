@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+import requests
+
+response = requests.get('${1:https://api.example.com/data}')
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Request failed with status code ${response.status_code}")
+]]></content>
+    <tabTrigger>reqget</tabTrigger>
+    <scope>source.python</scope>
+    <description>Requests GET Request</description>
+</snippet>
